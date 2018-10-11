@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 	post 'users/signup', to: 'users#create'
 	get 'users', to: 'users#index'
 	get 'users/:id', to: 'users#show'
-	#put 'user/edit', to: 'users#update'
-	delete 'user/del', to: 'users#destroy'
+	delete 'user/delete', to: 'users#destroy'
+	root   'home#index'
+  	get    'auth', to: 'home#auth'
 
 
 end
