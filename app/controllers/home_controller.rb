@@ -3,7 +3,7 @@ before_action :authenticate_user,  only: [:auth]
 
   # Public method
   def index
-    render json: { service: 'auth-api', status: 200 }
+    render json: { service: 'latihan-auth-api', status: 200, message: '/users/signup for signup and /users/signin for sign in', parameters: 'username, email, password, password_confirmation' }
   end
   
   # Authorized only method
